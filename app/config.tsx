@@ -8,7 +8,7 @@ export const config = {
     useOllamaInference: false,
     useOllamaEmbeddings: false,
     searchProvider: 'serper', // 'serper', 'google', 'brave' // 'serper' is the default
-    inferenceModel: 'gemma-7b-it', // Groq: 'mixtral-8x7b-32768', 'gemma-7b-it' // OpenAI: 'gpt-3.5-turbo', 'gpt-4' // Ollama 'mistral', 'llama3' etc
+    inferenceModel: 'mixtral-8x7b-32768', // Groq: 'mixtral-8x7b-32768', 'gemma-7b-it' // OpenAI: 'gpt-3.5-turbo', 'gpt-4' // Ollama 'mistral', 'llama3' etc
     inferenceAPIKey: process.env.GROQ_API_KEY, // Groq: process.env.GROQ_API_KEY // OpenAI: process.env.OPENAI_API_KEY // Ollama: 'ollama' is the default
     embeddingsModel: 'text-embedding-3-small', // Ollama: 'llama2', 'nomic-embed-text' // OpenAI 'text-embedding-3-small', 'text-embedding-3-large'
     textChunkSize: 800, // Recommended to decrease for Ollama
