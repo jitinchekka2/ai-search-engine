@@ -83,7 +83,6 @@ Example usage screenshots:
 ![Map results](static/image3.png)
 ![Shopping results](static/image4.png)
 ![Expanded shooping results](static/image5.png)
-![Alt text](image.png)
 ## Design decisions and Technologies used
 ### Design decisions
 Istead of a simply summarizing the scrapped content using an LLM, this is an implementation of an <b>advanced Retrieval-Augmented Generation (RAG) model</b>. In RAG the core idea is to combine retrieval from a knowledge source with generative capabilities to provide contextually accurate and enriched answers.
@@ -167,14 +166,9 @@ Integration: Used for retrieving search results. The braveSearch function integr
 #### Serper API:
 Files:
 - app/tools/searchProviders.tsx
+- app/function-calling.tsx
 
-Integration: Utilized for fetching image and video results. This API is mentioned in the README but specific file references are not provided.
-
-#### Google Custom Search API:
-Files:
-- app/tools/searchProviders.tsx
-
-Integration: Used for retrieving shopping results. 
+Integration: Utilized for fetching image, video and shopping results.
 
 
 ## Future improvements and Roadmap
