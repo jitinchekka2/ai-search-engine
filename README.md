@@ -80,7 +80,9 @@ Sometimes the loading of the results, especially the text response, might take s
 Example usage screenshots:
 ![Alt text](static/image.png)
 ![Alt text](static/image2.png)
-![Alt text](static/image3.png)
+![Map results](static/image3.png)
+![Shopping results](static/image4.png)
+![Expanded shooping results](static/image-5.png)
 ## Design decisions and Technologies used
 ### Design decisions
 Istead of a simply summarizing the scrapped content using an LLM, this is an implementation of an <b>advanced Retrieval-Augmented Generation (RAG) model</b>. In RAG the core idea is to combine retrieval from a knowledge source with generative capabilities to provide contextually accurate and enriched answers.
@@ -129,6 +131,50 @@ The frontend is optimized for performance using Next.js and Tailwind CSS. The se
 - React-Leaflet (For maps)
 
 ## External APIs and Integrations
+External APIs and Libraries
+#### OpenAI API:
+
+Files:
+- app/tools/generateRelevantQuestions.tsx
+- app/tools/mentionFunctions/streamChatCompletion.ts
+- app/tools/mentionFunctions/structuredUnlockSummarize.ts
+- app/tools/streamingChatCompletion.tsx
+
+Integration: Used for generating relevant questions, streaming chat completions, and summarizing content. The API is accessed via the `openai` symbol in various files.
+
+#### Groq API:
+
+Files:
+- app/tools/contentProcessing.tsx
+
+Integration: Utilized for chat completions using the `mixtral-8x7b-32768` model. The groqResponse symbol indicates its usage in processing content and handling chat responses.
+
+#### Hugging Face Embeddings:
+
+Files:
+- app/tools/contentProcessing.tsx
+
+Integration: Employed for generating vector embeddings using the paraphrase-MiniLM-L3-v2 model. The embeddings symbol is used to handle embedding operations.
+
+#### Brave Search API:
+
+Files:
+- app/tools/searchProviders.tsx
+
+Integration: Used for retrieving search results. The braveSearch function integrates this API to fetch relevant content.
+
+#### Serper API:
+Files:
+- app/tools/searchProviders.tsx
+
+Integration: Utilized for fetching image and video results. This API is mentioned in the README but specific file references are not provided.
+
+#### Google Custom Search API:
+Files:
+- app/tools/searchProviders.tsx
+
+Integration: Used for retrieving shopping results. 
+
 
 ## Future improvements and Roadmap
 - Better error handling and logging
