@@ -14,7 +14,7 @@ This is an AI-powered search engine that combines traditional search capabilitie
 - Maps results using react-leaflet with details of each location in the map
 - Dark mode based on browser preferences
 
-The shopping results and map results are dynamicaaly rendered based on the user query.
+The shopping results and map results are dynamically rendered based on the user query.
 
 ## Setup and Installation
 ### Prerequisites
@@ -82,7 +82,8 @@ Example usage screenshots:
 ![Alt text](static/image2.png)
 ![Map results](static/image3.png)
 ![Shopping results](static/image4.png)
-![Expanded shooping results](static/image-5.png)
+![Expanded shooping results](static/image5.png)
+![Alt text](image.png)
 ## Design decisions and Technologies used
 ### Design decisions
 Istead of a simply summarizing the scrapped content using an LLM, this is an implementation of an <b>advanced Retrieval-Augmented Generation (RAG) model</b>. In RAG the core idea is to combine retrieval from a knowledge source with generative capabilities to provide contextually accurate and enriched answers.
